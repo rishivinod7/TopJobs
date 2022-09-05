@@ -1,0 +1,42 @@
+
+<div class="card">
+  <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4" style=" padding-top: 20px;" *ngFor="let j of jobs|paginate: { 
+          itemsPerPage: 3,
+          currentPage: page,
+          totalItems: size }; index as i">
+          <div class="card border border-success shadow-0 mb-3" style="width: 40%;">
+            
+              <div class="card-body">
+                  <label class="title">S.No</label>
+                  <h5 class="card-title" style="font-size: 0.65vw;font-weight: bold;">{{i+1}}</h5>
+                  <label class="title">Job Title</label>
+                  <p class="card-text" style="font-size: 0.65vw;font-weight: bold;">
+                      {{j.jobTitle}}
+                  </p>
+                  <label class="title">Expires On</label>
+                  <p class="card-text" style="font-size: 0.65vw;font-weight: bold;">
+                      {{j.validTill}}
+                  </p>
+                  
+              </div>
+              
+              <div class="card-footer">
+                  <button id="edit" class="btn btn-primary"  (click)="EditJob(j.jobId)" style="font-size: 0.65vw; font-weight: bold;">Edit</button>
+                  <br>   
+                  <br>
+                  <button id="delete" class="btn btn-primary" (click)="DeleteJob(j.jobId)"style="font-size: 0.65vw;">Delete</button>
+                  
+              </div>
+          </div>
+         
+      </div>
+  </div>
+  <pagination-controls style="margin-top: 3%;" (pageChange)="handlePageChange($event)"></pagination-controls>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+
+<div class="title-card" style="">
+    <h1 style="font-weight: medium;font-size: 150%; font-family: roboto mono; padding-top: 5%;">Employer Profile</h1>
+</div>
+<br>
+
+
+<div class="card h-100" style="width: 40%;">
+    <img src="https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_960_720.jpg" style="margin-top: -10px;" class="card-img-top"
+        alt="..." />
+    <div class="card-body">
+        <label class="title">Organization Name</label>
+        <h5 class="card-title" style="font-size: 0.7vw;">{{employer.organizationName}}</h5>
+        <label class="title">Address</label>
+        <p class="card-text" style="font-size: 0.7vw;">
+            {{employer.address}}
+        </p>
+        <label class="title">Industry</label>
+        <p class="card-text" style="font-size: 0.7vw;">
+            {{employer.industry}}
+        </p>
+        <label class="title">Description</label>
+        <p class="card-text" style="font-size: 0.7vw;">
+            {{employer.description}}
+        </p>
+
+    </div>
+    
+    <div class="card-footer">
+        <button class=" btn btn-primary" (click)="Details()">Edit Details</button>
+        
+    </div>
+</div>

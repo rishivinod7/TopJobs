@@ -1,0 +1,9 @@
+<app-admin-header-navbar (toggleSideBarForMe)="sideOpen()"></app-admin-header-navbar>
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="!sideOpenFlag">
+    <app-admin-side-navbar></app-admin-side-navbar>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

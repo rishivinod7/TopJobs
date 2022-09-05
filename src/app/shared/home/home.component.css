@@ -1,0 +1,120 @@
+
+/* .carousel-item
+{
+    width: 100%;
+    height: 450px;
+    background-image: linear-gradient(rgb(160, 137, 137), rgb(198, 185, 241), rgb(177, 201, 150), rgb(235, 223, 175));
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.heading-1
+{
+    color: aliceblue;
+    font-size: 60px;
+    font-family: cursive;
+}
+.d-block w-100
+{
+    width: 100px;
+}
+.heading-content
+{
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
+    color: rgb(190, 179, 179);
+    font-weight: bold;
+}
+.companies-list
+{
+    display: inline-flex;
+    list-style: none;
+}
+.companies-list li
+{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.companies-list .card
+{
+    border: 2px solid coral;
+    height:150px;
+    width:170px;
+    border-radius: 30px;
+    background-color: lightcyan;
+}
+.companies-list .card .card-title
+{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+}
+.companies-list .card .card-footer
+{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.company-logo
+{
+    height:40px;
+    width:60px;
+}
+.card-header
+{
+font-family: 'Dancing Script', cursive;
+font-size: 45px;
+font-weight:bold;
+}
+.find
+{
+    border-radius: 20px;
+}
+.banner {
+    /* The image used */
+    color: white;
+    /* padding-top: 10%; */
+    background-image:url(/assets/c3.jpg);
+  }
+/* .carousel-item img
+{
+    height: 100% !important;
+    width:100% !important;
+    align-items: center;
+    image-resolution: 1000dpi;
+    filter: none; 
+    -webkit-filter: blur(0px); 
+    -moz-filter: blur(0px); 
+    -ms-filter: blur(0px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='0');
+} */
+
+/* h5{
+    font-family: Roboto Mono !important;
+    font-size: 50px !important;
+} */
+.button{
+    font-family: Roboto Mono;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    padding: 20px;
+    background-color: rgb(147, 34, 192);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Carousel styling */
+
+  
+          /* Height for devices larger than 576px */
+          @media (min-width: 992px) {
+            #introCarousel {
+              margin-top: -58.59px;
+            }
+            #introCarousel,
+            .carousel-inner,
+            .carousel-item,
+            .carousel-item.active {
+              height: 50vh;
+            }
+          }

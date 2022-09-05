@@ -1,0 +1,101 @@
+<div class="title-card">
+    <div class="container">
+        <h1 class="title">Job Posts</h1>
+    </div>
+</div>
+
+
+
+
+
+   
+<div class="card">
+    <form class="wrap" style="margin-bottom: 3%;">
+        <div class="search">
+            <input class="searchTerm" type="text" name="searchTerm" placeholder="Filter by job name"
+                [(ngModel)]="searchTerm" />
+            <button class="btn-search" style="margin-left: 1%; margin-bottom:6%" (click)="search()">Search</button>
+        </div>
+    </form>
+    <div class="container">
+        <ng-container *ngIf="query==null || query==''">
+            <div class="row row-cols-1 row-cols-md-3 g-4" *ngFor="let i of jobs | paginate: { 
+                itemsPerPage: 3,
+                currentPage: page,
+                totalItems: size }; index as a">
+              
+                <div class="card border border-primary shadow-0 mb-3" style="width: 50%; margin-top: 20px;">
+                    <!-- <img src="https://mdbootstrap.com/img/new/standard/city/044.webp" class="card-img-top"
+                        alt="..." /> -->
+                    <div class="card-body">
+                        <label class="title">Company Name</label>
+                        <h5 class="card-title" style="font-size: 0.7vw; font-family: roboto mono;">{{i.companyName}}</h5>
+                        <label class="title">Job Title</label>
+                        <p class="card-text" style="font-size: 0.7vw;">
+                            {{i.jobTitle}}
+                        </p>
+                        <label class="title">Job Type</label>
+                        <p class="card-text" style="font-size: 0.7vw;">
+                            {{i.jobType}}
+                        </p>
+
+                    </div>
+                    
+                    <div class="card-footer">
+                        <button class="btn btn-primary" (click)="ViewJob(i.jobId,i.companyName)" style="font-size: 0.75vw;">View Job</button>
+                        
+                    </div>
+                </div>
+                <br>
+        
+            </div>
+
+
+        </ng-container>
+        <ng-container *ngIf="query!=null || query!=''">
+            <div class="row row-cols-1 row-cols-md-3 g-4" *ngFor="let i of filteredJobs | paginate: { 
+                itemsPerPage: 3,
+                currentPage: page,
+                totalItems: filterSize }| searchFilter: query; index as a">
+             
+                <div class="card border border-primary shadow-0 mb-3" style="width: 80%;">
+                    <!-- <img src="https://mdbootstrap.com/img/new/standard/city/044.webp" class="card-img-top"
+                        alt="..." /> -->
+                    <div class="card-body">
+                        <label class="title">Company Name</label>
+                        <h5 class="card-title">{{i.companyName}}</h5>
+                        <label class="title">Job Title</label>
+                        <p class="card-text">
+                            {{i.jobTitle}}
+                        </p>
+                        <label class="title">Salary</label>
+                        <p class="card-text">
+                            {{i.salary}}
+                        </p>
+
+                    </div>
+                    
+                    <div class="card-footer">
+                        <button class="btn btn-primary" (click)="ViewJob(i.jobId,i.companyName)">View Job</button>
+                        
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </ng-container>
+       
+    </div>
+    <pagination-controls style="margin-top: 6%;" (pageChange)="handlePageChange($event)"></pagination-controls>
+    
+</div>
+
+
+
+ 
+    
+
+
+
+

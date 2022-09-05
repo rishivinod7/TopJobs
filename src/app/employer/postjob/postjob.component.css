@@ -1,0 +1,76 @@
+body{
+    background-color: #dee9ff;
+   
+}
+
+.postjob{
+	/* padding: 50px 0; */
+    display: flex;
+
+    position: relative;
+    top: -10px;
+    height: -50% !important;
+    /* height: -30%; */
+    
+
+}
+
+.postjob form{
+    
+    background-color: #fff;
+    max-width: 900px;
+
+    margin: auto;
+    padding: 50px 70px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+   
+}
+
+.postjob form:hover{
+    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.postjob .item{
+	border-radius: 10px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    width: 80%;
+}
+.postjob .input{
+
+	border-radius: 20px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+}
+
+
+.postjob .create-account{
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 43%;
+    font-family: Roboto Mono;
+    background-color: rgb(172, 37, 172); 
+    font-weight: lighter;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    position: relative;
+    top: -20px;
+}
+.postjob .create-account:hover{
+    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+
+
+@media (max-width: 576px) {
+    .postjob form{
+        padding: 50px 20px;
+    }
+
+}

@@ -1,0 +1,24 @@
+
+.main-content
+{
+    /* background: -webkit-linear-gradient(bottom, #882dbd, #ab7bf7); */
+    /* background-repeat: no-repeat; */
+    margin: auto;
+    height: fit-content;
+    /* position: relative; */
+    /* background-image:url(src\assets\bg1.png); */
+    /* background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center; */
+  
+}
+* {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+
+  
+
+  

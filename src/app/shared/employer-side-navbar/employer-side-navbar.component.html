@@ -1,0 +1,23 @@
+<mat-nav-list>
+    <div class="profile-card" >
+        <div class="header" >
+          
+            <h2 style="font-family: Roboto Mono; margin-left: 15px; font-size: 100%;">{{userEmail}}</h2>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/employer-dashboard/employer-profile">View Profile</a>
+    <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink="/employer-dashboard/analytics">Analytics</a> -->
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/employer-dashboard/trackjobs">Track Jobs</a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/employer-dashboard/postjob">Post a Job</a>
+    
+
+    
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item routerLinkActive="list-item-active" (click)="logOut()">Log out</a>
+
+</mat-nav-list>

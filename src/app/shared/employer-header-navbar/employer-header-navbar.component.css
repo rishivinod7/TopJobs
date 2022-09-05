@@ -1,0 +1,10 @@
+ul li{
+    list-style: none;
+    
+    display: inline;
+}
+
+
+.mat-toolbar{
+    background-color: #21005a;
+}

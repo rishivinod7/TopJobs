@@ -1,0 +1,8 @@
+.mat-toolbar{
+    background-color: #21005a;
+}
+ul li{
+    list-style: none;
+    
+    display: inline;
+}

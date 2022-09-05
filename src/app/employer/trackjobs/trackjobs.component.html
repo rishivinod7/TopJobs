@@ -1,0 +1,42 @@
+<div class="title-card">
+    <div class="container">
+        <h1 class="title">Track Jobs</h1>
+    </div>
+</div>
+
+<div class="card" ><!--  style="background-color:rgb(238, 202, 255);"> -->
+
+    <div class="container">
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4" style=" padding-top: 20px;" *ngFor="let i of jobs|paginate: { 
+            itemsPerPage: 3,
+            currentPage: page,
+            totalItems: size }">
+            <div class="card border border-primary shadow-0 mb-3" style="width: 50%; align-items: center;  ">
+               
+                <div class="card-body">
+                    <label class="title">Job Title</label>
+                    <h5 class="card-title" style="font-size: 0.9vw; font-family: roboto mono;">{{i.jobTitle}}</h5>
+                    <label class="title">Location</label>
+                    <p class="card-text" style="font-size: 0.8vw;">
+                        {{i.location}}
+                    </p>
+                    <label class="title">Job Type</label>
+                    <p class="card-text" style="font-size: 0.8vw;">
+                        {{i.jobType}}
+                    </p>
+
+                </div>
+                
+                <div class="card-footer" style="background-color: white; max-width: fit-content;">
+                    <button class="btn btn-primary" (click)="ViewJob(i.jobId)">View More</button>
+                    <br>
+                    <button class="btn btn-primary" (click)="ViewApplicants(i.jobId)" style="margin-top: 10px;">View Applicants</button>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <pagination-controls style="margin-top: 3%;" (pageChange)="handlePageChange($event)"></pagination-controls>
+</div>
+

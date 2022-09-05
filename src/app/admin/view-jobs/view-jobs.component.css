@@ -1,0 +1,73 @@
+.title-card{
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 13px;
+    width:fit-content;
+    padding-top: 12px;
+    margin-top: -10%;
+    height: fit-content;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+  .card {
+      /* Add shadows to create the "card" effect */
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+     
+      justify-content: center;
+      text-align: center;
+      margin: auto;
+      margin-top: 2%;
+      font-family: Roboto Mono;
+      width:50%;
+  
+    }
+    
+    /* On mouse-over, add a deeper shadow */
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    /* Add some padding inside the card container */
+    .container {
+  
+      padding: 2px 16px;
+    }
+  h1{
+      font-family: Roboto Mono;
+      text-align: center;
+  }
+  .title{
+    /* color: white; */
+    font-family: Roboto Mono;
+    font-weight: bold;
+    font-size: 0.7vw;
+  }
+  
+  
+    #edit{
+        border: none;
+        color: black;
+        background-color: #dbcd04;
+        font-size: 13px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+    #delete{
+        border: none;
+        background-color: rgb(163, 0, 0);
+        font-size: 13px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+    }
+    #edit:hover{
+      border: none;
+      background-color: #fff133;
+  }
+  #delete:hover{
+    border: none;
+    background-color: rgb(240, 39, 39);
+}

@@ -1,0 +1,14 @@
+ul li{
+    list-style: none;
+    display: inline;
+}
+button
+{
+ 
+    margin-left: 0px;
+}
+
+.mat-toolbar{
+    background-color: #21005a;
+    
+}

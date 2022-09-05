@@ -1,0 +1,53 @@
+
+<div class="title-card">
+      <h1 class="title">Update Employer Profile</h1>
+</div>
+
+<br>
+<div class="card h-100" style="width: 40%;  margin-left: 30%;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;">
+  <img src="https://cdn.pixabay.com/photo/2016/10/21/00/50/editing-1756958_960_720.jpg" style="margin-top: -10px; height: 20% !important;"
+    class="card-img-top" alt="..." />
+  <div class="card-body">
+    <form [formGroup]="profileForm" (ngSubmit)="UpdateProfile()">
+      <div class="form-group">
+        <label style="font-family: Roboto Mono;">Organization Name</label>
+        <input type="text" name="title" class="form-control item" formControlName="organization"
+          [ngClass]="{ 'is-invalid': submitted && f['organization'].errors }">
+        <div *ngIf="submitted && f['organization'].errors['required']" class="invalid-feedback">Organization Name is required</div>
+        <div *ngIf="submitted && f['organization'].errors['pattern']" class="invalid-feedback">Organization Name should contain only alphabets</div>
+
+      </div>
+      <div class="form-group">
+        <label style="font-family: Roboto Mono;">Address</label>
+        <input type="text" name="title" class="form-control item" formControlName="address"
+          [ngClass]="{ 'is-invalid': submitted && f['address'].errors }">
+        <div *ngIf="submitted && f['address'].errors" class="invalid-feedback">Address is required</div>
+
+      </div>
+      <div class="form-group">
+        <label style="font-family: Roboto Mono;">Industry</label>
+        <input type="email" name="title" class="form-control item" formControlName="industry"
+          [ngClass]="{ 'is-invalid': submitted && f['industry'].errors }">
+        <div *ngIf="submitted && f['industry'].errors" class="invalid-feedback">Industry is required</div>
+
+      </div>
+      <div class="form-group">
+        <label style="font-family: Roboto Mono;">Description</label>
+        <textarea class="form-control item" name="description" formControlName="description"
+          [ngClass]="{ 'is-invalid': submitted && f['description'].errors }"></textarea>
+        <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">Description is required</div>
+
+      </div>
+
+      <div class="card-footer">
+        <div class="form-group">
+          <button class=" btn btn-primary">Update Details</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+
+</div>

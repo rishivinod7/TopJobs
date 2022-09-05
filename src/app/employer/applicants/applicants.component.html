@@ -1,0 +1,108 @@
+<div class="title-card">
+  <div class="container">
+      <h1 class="title">Applicants</h1>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 g-4" style=" padding-top: 20px;" *ngFor="let app of applications|paginate: { 
+          itemsPerPage: 3,
+          currentPage: page,
+          totalItems: size }">
+          <div class="card border border-warning shadow-0 mb-3" style="width: 40%;">
+              
+              <div class="card-body">
+                  <label class="title">Applicant Name</label>
+                  <h5 class="card-title" style="font-family: roboto mono;"><a data-bs-toggle="modal" data-bs-target="#exampleModal">{{app.applicantName}}</a></h5>
+                  <label class="title">CV</label>
+                  <p class="card-text">
+                    <button class="btn btn-primary"><a style="color: white;" [href]="app.resume" target="_blank">View CV</a></button>
+                  </p>
+                  <label class="title">Status - {{app.applicationStatus}}</label>
+                  <p class="card-text">
+                    
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                    (click)="GetByApplicationId(app.applicationId)" style="margin-top: 10px;">
+                    Set Status
+                    </button>
+
+                  <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="staticBackdropLabel">Applicant Status</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                          <select name="status" [(ngModel)]="status">
+
+                            <option value="Approved">Select</option>
+                            <option value="Rejected">Reject</option>
+                            <option value="Shortlisted">Shortlist</option>
+
+                          </select>
+                        </div>
+                        <!-- reason changes -->
+                        <div class="modal-body">
+                          <textarea type="text" [(ngModel)]="reason" placeholder="please enter the reason"></textarea>
+                        </div>
+                        <!-- end -->
+                        <div class="modal-footer">
+                          <button type="button" id="close" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary" (click)="Save()" ds>Submit Status</button>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  
+        
+
+              </div>
+              
+             
+          </div>
+         
+      </div>
+  </div>
+  <pagination-controls style="margin-top: 3%;" (pageChange)="handlePageChange($event)"></pagination-controls>
+  <button class="back" (click)="backToJobs()">Back to Jobs</button>
+</div>
+
+
+
+
+<!-- Modal for job seeker info-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="my-input">Name</label>
+          <input id="my-input" class="form-control" type="text" name="" [value]="seeker.firstName" readonly>
+        </div>
+        <div class="form-group">
+          <label for="my-input">Skills</label>
+          <input id="my-input" class="form-control" type="text" name="" [value]="seeker.skills" readonly>
+        </div>
+        <div class="form-group">
+          <label for="my-input">Educational Qualification</label>
+          <input id="my-input" class="form-control" type="text" name="" [value]="seeker.highestEducationalQualification"
+            readonly>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<h1 style="text-align: center; font-family: Roboto Mono;">Post Job</h1>
+
+<div class="postjob">
+  <form [formGroup]="profileForm" (ngSubmit)="AddJob()">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Job Title</label>
+          <input type="text" name="title" class="form-control item" formControlName="title"
+            [ngClass]="{ 'is-invalid': submitted && f['title'].errors }" required>
+          <div *ngIf="submitted && f['title'].errors" class="invalid-feedback">Title is required</div>
+        </div>
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Salary</label>
+          <input type="number" class="form-control item" name="salary" formControlName="salary"
+            [ngClass]="{ 'is-invalid': submitted && f['salary'].errors }" required>
+          <div *ngIf="submitted && f['salary'].errors" class="invalid-feedback">Salary is required</div>
+        </div>
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Location</label>
+          <input type="text" class="form-control item" name="location" formControlName="location"
+            [ngClass]="{ 'is-invalid': submitted && f['location'].errors }" required>
+            <div *ngIf="submitted && f['location'].errors['required']" class="invalid-feedback">Location is required</div>
+            <div *ngIf="submitted && f['location'].errors['pattern']" class="invalid-feedback">Location should contain only alphabets</div>
+              </div>
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Required Experience</label>
+          <input type="text" name="category" class="form-control item" formControlName="experience"
+            [ngClass]="{ 'is-invalid': submitted && f['experience'].errors }" required>
+          <div *ngIf="submitted && f['experience'].errors" class="invalid-feedback">Experience is required</div>
+        </div>
+       
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Job Category</label>
+          <input type="text" name="category" class="form-control item" formControlName="category"
+            [ngClass]="{ 'is-invalid': submitted && f['category'].errors }" required>
+          <div *ngIf="submitted && f['category'].errors" class="invalid-feedback">Category is required</div>
+        </div>
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Job Type</label>
+          <select class="form-control item" name="category" formControlName="jobType"
+            [ngClass]="{ 'is-invalid': submitted && f['jobType'].errors }">
+            <div *ngIf="submitted && f['jobType'].errors" class="invalid-feedback">Job type is required</div>
+            <option value="Full-Time">Full Time</option>
+            <option value="Part-Time">Part Time</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Valid Till</label>
+          <input type="date" name="category" class="form-control item" formControlName="validTill"
+            [ngClass]="{ 'is-invalid': submitted && f['validTill'].errors }" required>
+          <div *ngIf="submitted && f['validTill'].errors" class="invalid-feedback">Valid till is required</div>
+        </div>
+        
+      </div>
+      <div class="col">
+        
+        <div class="form-group">
+          <label style="font-family: Roboto Mono;">Job Description</label>
+          <textarea class="form-control input" name="description" rows="8" formControlName="description"
+            [ngClass]="{ 'is-invalid': submitted && f['description'].errors }" required></textarea>
+          <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">Description is required</div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <button class="btn btn-block create-account">Submit</button>
+    </div>
+  </form>
+</div>

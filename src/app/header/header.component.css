@@ -1,0 +1,32 @@
+/* .navbar-nav
+{
+    
+    float: right;
+    margin-right: 0%;
+    font-size: 18px;
+} */
+ul li{
+    font-family: Roboto Mono;
+
+}
+
+.navbar
+{
+    background-color: #5600E8;
+    /* text-align: center;
+    height:fit-content; */
+}
+.navbar-nav a{
+    color: white;
+}
+.navbar-nav a:hover {
+    /* font-weight: bolder;
+    font-size: 20px;
+    text-decoration: none; */
+    color: black;
+  }
+  .vdivider {
+    border-left: 1.5px solid green;
+    height: 40px;
+    margin-top: 0%;
+  }

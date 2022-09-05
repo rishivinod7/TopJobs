@@ -1,0 +1,70 @@
+<h1>Job Details</h1>
+<div class="card h-100" style="width: 30%;">
+    <img src="https://cdn.pixabay.com/photo/2018/03/03/20/02/laptop-3196481_960_720.jpg" style="margin-top: -10px;" class="card-img-top"
+        alt="..." />
+    <div class="card-body">
+        <label class="title">Job Title</label>
+        <h5 class="card-title">{{job.jobTitle}}</h5>
+        <label class="title">About Company</label>
+        <p class="card-text">
+            {{job.aboutCompany}}
+        </p>
+        <label class="title">Annual CTC</label>
+        <p class="card-text">
+            {{job.salary}}
+        </p>
+        <label class="title">Job Location</label>
+        <p class="card-text">
+            {{job.location}}
+        </p>
+        <label class="title">Job Description</label>
+        <p class="card-text">
+            {{job.jobDescription}}
+        </p>
+
+    </div>
+    
+    <div class="card-footer">
+        <button class=" btn btn-primary" (click)="EditJob(job.jobId)">Edit Job</button>
+        
+    </div>
+</div>
+<!-- <div class="card">
+    <div class="container" >
+        
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <div class="mb-3">
+                        <label for="my-input" style="font-weight: bold;">Job Title</label>
+                        <div>{{job.jobTitle}}</div>
+                    </div>
+                
+                    <div class="mb-3">
+                        <label for="my-input" style="font-weight: bold;">About Company</label>
+                        <div>{{job.aboutCompany}}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="my-input" style="font-weight: bold;">Annual CTC</label>
+                        <div>{{job.salary}}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="my-input"style="font-weight: bold;">Job Location</label>
+                        <div>{{job.location}}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="my-input"style="font-weight: bold;">Job Description</label>
+                        <div>{{job.jobDescription}}</div>
+                    </div>
+
+                    <div class="mb-3">
+                        <button class="btn btn-primary" (click)="EditJob(job.jobId)" >Edit Job</button>
+                    </div>
+
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+

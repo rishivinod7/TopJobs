@@ -1,0 +1,77 @@
+<div class="registration-form">
+  <h1 style="text-align: center; font-family: Roboto Mono;">Profile</h1>
+
+  <form [formGroup]="profileForm" (ngSubmit)="UpdateProfile()">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">First Name</label>
+            <input type="text" name="title" class="form-control item" formControlName="firstName"
+            [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }">
+            <div *ngIf="submitted && f['firstName'].errors['required']" class="invalid-feedback">First Name is required</div>
+            <div *ngIf="submitted && f['firstName'].errors['pattern']" class="invalid-feedback">First Name should only contain alphabets</div>
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Last Name</label>
+            <input type="text" name="title" class="form-control item" formControlName="lastName"
+            [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }">
+            <div *ngIf="submitted && f['lastName'].errors['required']" class="invalid-feedback">Last Name is required</div>
+            <div *ngIf="submitted && f['lastName'].errors['pattern']" class="invalid-feedback">Last Name should only contain alphabets</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Email</label>
+            <input type="email" name="title" class="form-control item" formControlName="email"
+            [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+            <div *ngIf="submitted && f['email'].errors['required']" class="invalid-feedback">Email is required</div>
+            <div *ngIf="submitted && f['email'].errors['email']" class="invalid-feedback">Email is invalid</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Skills</label>
+            <input type="text" name="title" class="form-control item" formControlName="skills"
+            [ngClass]="{ 'is-invalid': submitted && f['skills'].errors }">
+            <div *ngIf="submitted && f['skills'].errors" class="invalid-feedback">Skills are required</div>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Highest Educational Qualification</label>
+            <input type="text" class="form-control item" name="salary" formControlName="highestQualification"
+            [ngClass]="{ 'is-invalid': submitted && f['highestQualification'].errors }">
+            <div *ngIf="submitted && f['highestQualification'].errors" class="invalid-feedback">Qualification is required</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Name of Instituition</label>
+            <input type="text" name="title" class="form-control item" formControlName="nameOfInstituition"
+            [ngClass]="{ 'is-invalid': submitted && f['nameOfInstituition'].errors }">
+            <div *ngIf="submitted && f['nameOfInstituition'].errors['required']" class="invalid-feedback">Instituition is required</div>
+            <div *ngIf="submitted && f['nameOfInstituition'].errors['pattern']" class="invalid-feedback">Instituition name should only contain alphabets</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Year Of Passing</label>
+            <input type="text" name="title" class="form-control item" formControlName="yearOfPassing"
+            [ngClass]="{ 'is-invalid': submitted && f['yearOfPassing'].errors }">
+            <div *ngIf="submitted && f['yearOfPassing'].errors['required']" class="invalid-feedback">Passing year is required</div>
+            <div *ngIf="submitted && (f['yearOfPassing'].errors['pattern'] || f['yearOfPassing'].errors['minlength'])" class="invalid-feedback">Passing year is invalid</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Work Experience Duration</label>
+            <input type="text" name="title" class="form-control item" formControlName="workExperience"
+            [ngClass]="{ 'is-invalid': submitted && f['workExperience'].errors }">
+            <div *ngIf="submitted && f['workExperience'].errors" class="invalid-feedback">Work Experience is required</div>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-block create-account">Save</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

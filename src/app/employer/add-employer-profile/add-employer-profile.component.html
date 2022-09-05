@@ -1,0 +1,46 @@
+<div class="registration-form">
+  <h1 style="text-align: center; font-family: Roboto Mono;">Add Employer Profile Details</h1>
+
+  <form [formGroup]="profileForm" (ngSubmit)="AddProfile()">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Organization Name</label>
+            <input type="text" name="title" class="form-control item" formControlName="organization"
+            [ngClass]="{ 'is-invalid': submitted && f['organization'].errors }">
+            <div *ngIf="submitted && f['organization'].errors['required']" class="invalid-feedback">Organization Name is required</div>
+            <div *ngIf="submitted && f['organization'].errors['pattern']" class="invalid-feedback">Organization Name should contain only alphabets</div>
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Address</label>
+            <input type="text" name="title" class="form-control item" formControlName="address" 
+            [ngClass]="{ 'is-invalid': submitted && f['address'].errors }">
+            <div *ngIf="submitted && f['address'].errors" class="invalid-feedback">Address is required</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Industry</label>
+            <input type="email" name="title" class="form-control item" formControlName="industry" 
+            [ngClass]="{ 'is-invalid': submitted && f['industry'].errors }">
+            <div *ngIf="submitted && f['industry'].errors" class="invalid-feedback">Industry is required</div>
+
+          </div>
+          <div class="form-group">
+            <label style="font-family: Roboto Mono;">Description</label>
+            <textarea class="form-control input" name="description" rows="8" formControlName="description" 
+            [ngClass]="{ 'is-invalid': submitted && f['description'].errors }"
+              required></textarea>
+              <div *ngIf="submitted && f['description'].errors" class="invalid-feedback">Description is required</div>
+
+          </div>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-block create-account">Save</button>
+
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

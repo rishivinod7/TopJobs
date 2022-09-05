@@ -1,0 +1,72 @@
+<!-- <div class="container" style="height: 10%;width: 30%;">
+    <div class="row">
+        <div class="col sm-2">
+            <h1 style="color: brown;font-family: cursive;">Total Jobs Posted On our Portal</h1>
+            <div class="chart-wrapper" style="width: 50%;">
+                <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels" [options]="ChartOptions"
+                    [plugins]="ChartPlugins" [legend]="ChartLegend" type=doughnut>
+                </canvas>
+            </div>
+            <div class="col sm-2">
+                <h1 style="color: brown;font-family: cursive;">Applications</h1>
+                <div class="chart-wrapper" style="width: 50%;">
+                    <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="ChartOptions"
+                        [plugins]="ChartPlugins" [legend]="ChartLegend" type=pie>
+                    </canvas>
+                </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="card">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" style=" padding-top: 20px;align-items: center;justify-content: center;display: flex; " >
+            <div class="card border border-primary shadow-0 mb-3" style="width: 80%;  ">
+                <!-- <img src="https://mdbootstrap.com/img/new/standard/city/044.webp" class="card-img-top"
+                    alt="..." /> -->
+                <div class="card-body">
+                    <label class="title">Total Jobs Posted On our Portal</label>
+                    
+                    
+                    <p class="card-text" >
+                        <div class="chart-wrapper" style="width: 50%;">
+                            <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels" [options]="ChartOptions"
+                                [plugins]="ChartPlugins" [legend]="ChartLegend" type=doughnut>
+                            </canvas>
+                        </div>
+                   
+                    
+                </div>
+                
+                <!-- <div class="card-footer">
+                    <button class="btn btn-primary" (click)="ViewJobDetails(a.jobId)">View Job Info</button>
+                    
+                </div> -->
+            </div>
+            <div class="card border border-primary shadow-0 mb-3" style="width: 80%;">
+                <!-- <img src="https://mdbootstrap.com/img/new/standard/city/044.webp" class="card-img-top"
+                    alt="..." /> -->
+                <div class="card-body">
+                    <label class="title">Applications</label>
+                    
+                    
+                    <p class="card-text">
+                        <div class="chart-wrapper" style="width: 50%;">
+                            <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="ChartOptions"
+                                [plugins]="ChartPlugins" [legend]="ChartLegend" type=pie>
+                            </canvas>
+                        </div>
+                   
+                    
+                </div>
+                
+                <!-- <div class="card-footer">
+                    <button class="btn btn-primary" (click)="ViewJobDetails(a.jobId)">View Job Info</button>
+                    
+                </div> -->
+            </div>
+           
+        </div>
+    </div>
+    
+</div>

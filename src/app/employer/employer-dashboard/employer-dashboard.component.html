@@ -1,0 +1,11 @@
+<app-employer-header-navbar (toggleSideBarForMe)="sideOpen()"></app-employer-header-navbar>
+<mat-drawer-container>
+    <mat-drawer mode="side" [opened]="!sideOpenFlag">
+        <app-employer-side-navbar></app-employer-side-navbar>
+    </mat-drawer>
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+        
+    </mat-drawer-content>
+    
+</mat-drawer-container>

@@ -1,0 +1,24 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <mat-divider></mat-divider>
+            <h2>{{userEmail}}</h2>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin-dashboard/manage-employers">Manage Employers</a>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/admin-dashboard/reports">Analytics</a>
+
+    
+
+    
+
+    <mat-divider></mat-divider>
+
+    <a mat-list-item routerLinkActive="list-item-active" (click)="logOut()">Log out</a>
+
+</mat-nav-list>
+
+

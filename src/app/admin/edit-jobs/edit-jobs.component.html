@@ -1,0 +1,39 @@
+<div class="container job-details" style="margin-left: 500px;">
+    <h1>Job-Details</h1>
+  
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <div class="mb-3">
+            <label for="my-input">Job Title :</label>
+            <div>{{job.jobTitle}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="my-input">Job Description :</label>
+            <div>{{job.jobDescription}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="my-input">Company Name :</label>
+            <div>{{job.companyName}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="my-input">About Company :</label>
+            <div>{{job.aboutCompany}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="my-input">Annual CTC :</label>
+            <div>{{job.salary}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="my-input">Job Location :</label>
+            <div>{{job.location}}</div>
+          </div>
+          <div class="mb-3">
+            <button class=" btn btn-primary" (click)="Details()">Edit Details</button>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+

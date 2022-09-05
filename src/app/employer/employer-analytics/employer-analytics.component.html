@@ -1,0 +1,13 @@
+<div class="container" style="height: 10%;width: 30%;">
+    <div class="row">
+        <div class="col sm-2">
+            <h1 style="color: brown;font-family: cursive;">Total Jobs Posted</h1>
+            <div class="chart-wrapper" style="width: 50%;">
+                <canvas baseChart [datasets]="pieChartData" [labels]="pieChartLabels" [options]="ChartOptions"
+                    [plugins]="ChartPlugins" [legend]="ChartLegend" type=doughnut>
+                </canvas>
+            </div>
+            
+        </div>
+    </div>
+</div>

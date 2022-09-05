@@ -1,0 +1,12 @@
+.registration-form form{
+    background-color: #fff;
+    max-width:max-content;
+    margin: auto;
+    padding: 50px 70px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.registration-form:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
